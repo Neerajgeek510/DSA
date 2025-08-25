@@ -30,15 +30,15 @@ int isempty(stack *ptr){
         printf("%d pushed in stack\n", value);
     }
 }
-int pop(stack *ptr, int value){
+int pop(stack *ptr){
     if(isempty(ptr)){
         printf("stack is empty!");
         return -1;
     }
     else{
-        value=ptr->arr[ptr->top];
+        int value=ptr->arr[ptr->top];
         ptr->top=ptr->top-1;
-        printf("%d stack pop out\n",value);
+        return value;
         
     }
 }
@@ -54,6 +54,13 @@ int main(){
     push(s,29);
     push(s,79);
     push(s,18);
-    pop(s,20);
+    printf("Here u can see Last in first out (LIFO)!\n");
+    printf("%d pop out from stcak\n",pop(s));
+    printf("%d pop out from stcak\n",pop(s));
+    printf("%d pop out from stcak\n",pop(s));
+    printf("%d pop out from stcak\n",pop(s));
+    printf("Thank uhh!);
+        return 0;
  
 }
+
