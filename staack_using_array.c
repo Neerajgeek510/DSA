@@ -20,7 +20,13 @@ int isempty(stack *ptr){
         return 0;
     }
 }
- void push(stack *ptr,int value){
+int stacktop(stack*ptr){
+return ptr->arr[ptr->top];
+}
+int stackbottom(stack*ptr){
+return ptr->arr[0];
+}
+ int push(stack *ptr,int value){
     if(isfull(ptr)){
         printf("stack is full");
     }
@@ -63,16 +69,22 @@ int main(){
     push(s,29);
     push(s,79);
     push(s,18);
+    push(s,11);
+    push(s,38);
     printf("Here u can see Last in first out (LIFO)!\n");
     printf("%d pop out from stcak\n",pop(s));
     printf("%d pop out from stcak\n",pop(s));
    for (int j=1;j<=s->top+1;j++){
          printf("the value of postion %d  is %d\n",j,peek(s,j));
     }
+    printf("The topest value of stack is:%d\n",stacktop(s));
+    printf("The bottom value of stack is:%d\n",stackbottom(s));
+
     printf("Thank uhh!");
         return 0;
  
 }
+
 
 
 
