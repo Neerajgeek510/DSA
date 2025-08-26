@@ -42,6 +42,15 @@ int pop(stack *ptr){
         
     }
 }
+int peek(stack*ptr, int i){
+if(ptr->top-i+1<0){
+        printf("not a valid postion\n");
+        return -1;
+    }
+    else{
+        return ptr->arr[ptr->top-i+1];
+    }
+}
 
 int main(){
     stack *s = (stack *)malloc(sizeof(stack));
@@ -57,10 +66,12 @@ int main(){
     printf("Here u can see Last in first out (LIFO)!\n");
     printf("%d pop out from stcak\n",pop(s));
     printf("%d pop out from stcak\n",pop(s));
-    printf("%d pop out from stcak\n",pop(s));
-    printf("%d pop out from stcak\n",pop(s));
+   for (int j=1;j<s->top+1;j++){
+         printf("the value of postion %d  is %d\n",j,peek(s,j));
+    }
     printf("Thank uhh!);
         return 0;
  
 }
+
 
