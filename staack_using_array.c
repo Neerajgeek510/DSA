@@ -66,13 +66,14 @@ int main(){
     printf("Here u can see Last in first out (LIFO)!\n");
     printf("%d pop out from stcak\n",pop(s));
     printf("%d pop out from stcak\n",pop(s));
-   for (int j=1;j<s->top+1;j++){
+   for (int j=1;j<=s->top+1;j++){
          printf("the value of postion %d  is %d\n",j,peek(s,j));
     }
     printf("Thank uhh!");
         return 0;
  
 }
+
 
 
 
