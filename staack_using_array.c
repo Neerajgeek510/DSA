@@ -69,9 +69,10 @@ int main(){
    for (int j=1;j<s->top+1;j++){
          printf("the value of postion %d  is %d\n",j,peek(s,j));
     }
-    printf("Thank uhh!);
+    printf("Thank uhh!");
         return 0;
  
 }
+
 
 
