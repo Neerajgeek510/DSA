@@ -59,7 +59,6 @@ int  pop(node*ptr){
 
 }
 int main(){
-    
    top = push(top,78);
    top = push(top, 45);
    top = push(top, 99);
